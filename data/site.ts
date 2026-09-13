@@ -2,7 +2,7 @@ export const site = {
   name: "Köhler Westphal",
   legalName: "Köhler Westphal Rechtsanwälte Steuerberater Notare PartG mbB",
   claim: "Partnerschaft mit mehr als 450 Anwältinnen, Anwälten, Steuerberatern und Notaren an acht Standorten.",
-  url: "https://koehler-westphal.example",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description: "Köhler Westphal ist eine Partnerschaft von Rechtsanwälten, Steuerberatern und Notaren mit acht Standorten in Deutschland und Büros in Brüssel und Zürich. Fiktive Demo-Website.",
   email: "info@koehler-westphal.example",
   phone: "+49 211 00000000",
