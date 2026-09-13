@@ -19,8 +19,8 @@ export function PageHead({ crumbs, title, accent, eyebrow, intro, className }: {
         <span aria-hidden className="absolute left-0 top-[40%] h-10 w-4 bg-copper anim-stretch" />
         <div className={cn("container-x py-14 lg:py-20", className)}>
           {eyebrow && <p className="text-[12px] uppercase tracking-wide text-white/70">{eyebrow}</p>}
-          <h1 className="headline anim-swipe mt-2 text-[32px] sm:text-[40px]">{title}{accent && <> <span className="text-copper">{accent}</span></>}</h1>
-          {intro && <div className="mt-5 max-w-2xl text-[14.5px] leading-relaxed text-white/85">{intro}</div>}
+          <h1 className="headline anim-swipe mt-3 text-[34px] sm:text-[44px]">{title}{accent && <> <span className="text-copper">{accent}</span></>}</h1>
+          {intro && <div className="mt-5 max-w-2xl text-[15px] font-light leading-relaxed text-white/85">{intro}</div>}
         </div>
       </div>
       <Breadcrumbs crumbs={crumbs} />

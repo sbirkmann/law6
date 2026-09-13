@@ -20,20 +20,20 @@ export function HeroSlider({ compact = false }: { compact?: boolean }) {
   useEffect(() => { if (paused || reduce) return; const t = window.setInterval(() => setI((v) => (v + 1) % slides.length), 7000); return () => window.clearInterval(t); }, [paused, reduce]);
   const s = slides[i];
   return (
-    <section className={cn("relative w-full overflow-hidden bg-pine text-white", compact ? "h-[360px]" : "h-[480px] lg:h-[520px]")} aria-roledescription="Karussell" aria-label="Aktuelle Themen">
+    <section className={cn("relative w-full overflow-hidden bg-pine text-white", compact ? "h-[360px]" : "h-[520px] lg:h-[580px]")} aria-roledescription="Karussell" aria-label="Aktuelle Themen">
       <AnimatePresence mode="sync">
         <motion.div key={i} className="absolute inset-0" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.9 }}>
           <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]"><Image src={s.image} alt={s.alt} fill priority={i === 0} sizes="100vw" className="object-cover" /></div>
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-pine via-pine/85 to-pine/20" />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-pine-deep via-pine/90 to-pine/25" />
         </motion.div>
       </AnimatePresence>
       <span aria-hidden className="absolute left-0 top-[28%] h-10 w-4 bg-copper anim-stretch" />
       <div className="container-x relative z-10 flex h-full items-center">
         <AnimatePresence mode="wait">
           <motion.div key={i} initial={reduce ? false : { opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 12 }} transition={{ duration: 0.6 }} className="max-w-lg">
-            <h1 className="headline text-[32px] sm:text-[40px]">{s.title}</h1>
-            <p className="mt-4 text-[14.5px] leading-relaxed text-white/85">{s.text}</p>
-            <Link href={s.href} className="btn-white mt-6">{s.label}</Link>
+            <h1 className="headline text-[34px] sm:text-[44px]">{s.title}</h1>
+            <p className="mt-5 max-w-md text-[15px] font-light leading-relaxed text-white/85">{s.text}</p>
+            <Link href={s.href} className="btn-white mt-8">{s.label}</Link>
           </motion.div>
         </AnimatePresence>
       </div>

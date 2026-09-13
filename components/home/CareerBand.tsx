@@ -9,8 +9,8 @@ export function CareerBand() {
       <span aria-hidden className="absolute left-0 top-[18%] h-10 w-4 bg-copper" />
       <div className="container-x relative py-20 lg:py-28">
         <div className="max-w-md">
-          <h2 className="headline text-[32px] sm:text-[38px]">Ihre Karriere bei<br />Köhler Westphal</h2>
-          <p className="mt-5 text-[14px] leading-relaxed text-white/85">Ausgezeichnete Beratungsleistungen sind nur möglich durch das Engagement hervorragender Kolleginnen und Kollegen. Entdecken Sie Ihre Einstiegsmöglichkeiten.</p>
+          <h2 className="headline text-[34px] sm:text-[42px]">Ihre Karriere bei<br />Köhler Westphal</h2>
+          <p className="mt-6 text-[15px] font-light leading-relaxed text-white/85">Ausgezeichnete Beratungsleistungen sind nur möglich durch das Engagement hervorragender Kolleginnen und Kollegen. Entdecken Sie Ihre Einstiegsmöglichkeiten.</p>
           <Link href="/karriere" className="chevron-link mt-6 text-white">Zur Karriereseite</Link>
           <ul className="mt-4 space-y-1 text-[13.5px]">{[["Rechtsanwälte w/m/d", "/karriere/lawyers"], ["Mitarbeiter w/m/d", "/karriere/lawyers#business"], ["Referendare, wiss. Mitarbeiter, Praktikanten w/m/d", "/karriere/lawyers#talents"]].map(([l, h]) => <li key={h}><Link href={h} className="chevron-link text-white/90 hover:text-white">{l}</Link></li>)}</ul>
         </div>

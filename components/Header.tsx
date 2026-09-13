@@ -51,7 +51,7 @@ export function Header() {
               <ul className="flex items-center gap-5">
                 {nav.map((item) => (
                   <li key={item.href} onMouseEnter={() => open(item)}>
-                    <Link href={item.href} className={cn("inline-flex items-center gap-1 text-[14px] transition-colors hover:text-pine", (active(item.href) || openItem?.href === item.href) ? "text-pine" : "text-ink")} aria-expanded={item.children ? openItem?.href === item.href : undefined}>{item.label}</Link>
+                    <Link href={item.href} className={cn("inline-flex items-center gap-1 text-[13.5px] font-medium tracking-[0.02em] transition-colors hover:text-pine", (active(item.href) || openItem?.href === item.href) ? "text-pine" : "text-ink")} aria-expanded={item.children ? openItem?.href === item.href : undefined}>{item.label}</Link>
                   </li>
                 ))}
               </ul>

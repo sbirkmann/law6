@@ -17,7 +17,7 @@ export function Footer() {
           <ul className="mt-8 flex gap-2" aria-label="Soziale Netzwerke">{["in", "▶", "wc", "🎙"].map((s, i) => <li key={i}><a href="#" aria-label={["LinkedIn", "YouTube", "WeChat", "Podcast"][i] + " (Demo)"} className="inline-flex h-8 w-8 items-center justify-center bg-pine-mid text-[12px] font-bold text-white hover:bg-pine">{s}</a></li>)}</ul>
         </div>
         <ul className="grid grid-cols-3 gap-3 lg:col-span-4" aria-label="Auszeichnungen (fiktiv)">
-          {awards.slice(0, 6).map((a) => <li key={a.title + a.year} className="flex aspect-[4/3] flex-col items-center justify-center border border-line p-2 text-center"><span className="text-[9px] uppercase tracking-wide text-muted">{a.by.replace(" (fiktiv)", "")}</span><span className="mt-1 text-[11px] font-bold leading-tight text-pine">{a.title}</span><span className="mt-1 text-[10px] text-muted">{a.year}</span></li>)}
+          {awards.slice(0, 6).map((a) => <li key={a.title + a.year} className="card flex aspect-[4/3] flex-col items-center justify-center p-2 text-center"><span className="text-[9px] uppercase tracking-wide text-muted">{a.by.replace(" (fiktiv)", "")}</span><span className="mt-1 text-[11px] font-bold leading-tight text-pine">{a.title}</span><span className="mt-1 text-[10px] text-muted">{a.year}</span></li>)}
         </ul>
       </div>
       <div className="border-t border-line"><p className="container-x py-4 text-[12px] leading-relaxed text-muted"><strong className="font-semibold text-ink">Demo-Projekt:</strong> Köhler Westphal ist eine fiktive Kanzlei. Alle Namen, Personen, Mandate, Kennzahlen, Auszeichnungen und Inhalte sind erfunden. Fotos: Unsplash. © {new Date().getFullYear()}</p></div>

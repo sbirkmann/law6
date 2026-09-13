@@ -5,8 +5,8 @@
   --color-pine-deep: #082a40;
   --color-pine-mid: #2e6c8e;
   --color-pine-soft: #7fa3bd;
-  --color-copper: #7fae2a;
-  --color-copper-deep: #5f8a1c;
+  --color-copper: #6f9a2d;
+  --color-copper-deep: #57791f;
   --color-copper-soft: #e6f0d4;
   --color-stone: #f5f5f5;
   --color-stone-deep: #e6e6e6;
@@ -29,7 +29,7 @@
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   }
-  body { @apply bg-white text-ink font-sans antialiased; overflow-x: clip; letter-spacing: 0.01em; }
+  body { @apply bg-white text-ink font-sans antialiased; overflow-x: clip; letter-spacing: 0; font-size: 15.5px; line-height: 1.65; }
   ::selection { background: var(--color-copper-soft); color: var(--color-ink); }
   :focus-visible { outline: 2px solid var(--color-copper); outline-offset: 3px; }
   h1, h2, h3 { text-wrap: balance; }
@@ -48,9 +48,9 @@
 /* Condensed uppercase headline, as the template does with Oswald */
 @utility headline {
   font-family: var(--font-sans);
-  font-weight: 400;
-  letter-spacing: -0.005em;
-  line-height: 1.15;
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
 }
 @utility headline-xl { font-size: clamp(2.25rem, 4.2vw, 3rem); }
 @utility headline-lg { font-size: clamp(1.75rem, 3vw, 2.25rem); }
@@ -131,10 +131,10 @@
 @utility anim-stretch { transform-origin: left; animation: stretch 700ms var(--ease-out-expo) both; }
 @utility anim-swipe { animation: swipe 800ms var(--ease-out-expo) both; }
 @utility btn-white {
-  display: inline-flex; align-items: center; height: 2.5rem; padding-inline: 1.25rem;
-  background: #fff; color: var(--color-ink); font-size: 0.85rem; font-weight: 500;
-  transition: background-color 300ms, color 300ms;
-  &:hover { background: var(--color-copper); color: #fff; }
+  display: inline-flex; align-items: center; height: 2.75rem; padding-inline: 1.5rem;
+  background: #fff; color: var(--color-ink); font-size: 0.84rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+  transition: background-color 300ms, color 300ms, transform 300ms var(--ease-out-expo);
+  &:hover { background: var(--color-copper); color: #fff; transform: translateY(-1px); }
 }
 @utility btn-green {
   display: inline-flex; align-items: center; height: 2.25rem; padding-inline: 1.1rem;
@@ -146,4 +146,15 @@
   display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.85rem;
   &::after { content: "›"; font-size: 1.1rem; line-height: 1; transition: transform 300ms; }
   &:hover::after { transform: translateX(3px); }
+}
+
+@utility card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  transition: transform 500ms var(--ease-out-expo), box-shadow 500ms var(--ease-out-expo), border-color 300ms;
+  &:hover { transform: translateY(-3px); box-shadow: 0 28px 50px -30px rgba(15, 61, 92, 0.35); border-color: var(--color-pine-soft); }
+}
+@utility tile {
+  transition: transform 600ms var(--ease-out-expo), box-shadow 600ms var(--ease-out-expo);
+  &:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -36px rgba(15, 61, 92, 0.5); z-index: 1; }
 }
