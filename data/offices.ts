@@ -1,0 +1,13 @@
+export type Office = { slug: string; city: string; short: string; street: string; zip: string; phone: string; fax: string; email: string; image: string; text: string; lawyers: number };
+
+export const offices: Office[] = [
+  { slug: "berlin", city: "Berlin", short: "Berlin", street: "Kurfürstendamm 32", zip: "10719", phone: "+49 30 00000000", fax: "+49 30 00000001", email: "berlin@koehler-westphal.example", image: "/images/berlin-2.jpg", text: "Öffentliches Recht, Medien, Gesundheit.", lawyers: 48 },
+  { slug: "chemnitz", city: "Chemnitz", short: "Chemnitz", street: "Brückenstraße 4", zip: "09111", phone: "+49 371 00000000", fax: "+49 371 00000001", email: "chemnitz@koehler-westphal.example", image: "/images/stairs-2.jpg", text: "Mittelstand, Insolvenz, Immobilien.", lawyers: 14 },
+  { slug: "duesseldorf", city: "Düsseldorf", short: "Düsseldorf", street: "Georg-Glock-Straße 4", zip: "40474", phone: "+49 211 00000000", fax: "+49 211 00000001", email: "duesseldorf@koehler-westphal.example", image: "/images/glass-1.jpg", text: "Hauptsitz. Gesellschaftsrecht, Kartellrecht, Arbeitsrecht.", lawyers: 118 },
+  { slug: "frankfurt", city: "Frankfurt", short: "Frankfurt", street: "Goetheplatz 5", zip: "60313", phone: "+49 69 00000000", fax: "+49 69 00000001", email: "frankfurt@koehler-westphal.example", image: "/images/skyline-2.jpg", text: "Banking & Finance, Kapitalmarkt, Steuern.", lawyers: 62 },
+  { slug: "hamburg", city: "Hamburg", short: "Hamburg", street: "Neuer Wall 63", zip: "20354", phone: "+49 40 00000000", fax: "+49 40 00000001", email: "hamburg@koehler-westphal.example", image: "/images/hamburg-1.jpg", text: "Handel, Logistik, Versicherungen.", lawyers: 57 },
+  { slug: "koeln", city: "Köln", short: "Köln", street: "Magnusstraße 13", zip: "50672", phone: "+49 221 00000000", fax: "+49 221 00000001", email: "koeln@koehler-westphal.example", image: "/images/highway-3.jpg", text: "Medien, IT, Datenschutz, Vergabe.", lawyers: 49 },
+  { slug: "muenchen", city: "München", short: "München", street: "Prinzregentenstraße 48", zip: "80538", phone: "+49 89 00000000", fax: "+49 89 00000001", email: "muenchen@koehler-westphal.example", image: "/images/color-3.jpg", text: "Technologie, Life Sciences, Private Equity.", lawyers: 61 },
+  { slug: "stuttgart", city: "Stuttgart", short: "Stuttgart", street: "Königstraße 1c", zip: "70173", phone: "+49 711 00000000", fax: "+49 711 00000001", email: "stuttgart@koehler-westphal.example", image: "/images/dam-2.jpg", text: "Automotive, Maschinenbau, Restrukturierung.", lawyers: 38 },
+];
+export const getOffice = (slug: string) => offices.find((o) => o.slug === slug);
